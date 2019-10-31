@@ -1,0 +1,25 @@
+
+
+#-------- Query ---------
+
+
+
+#---------- Schema Types -------------
+
+#User schema
+type User{
+    id: ID!
+    firstName: String!
+    lastName: String!
+}
+
+
+#----------- input Types ----------
+
+
+
+#--------- Enums
+
+
+
+#----------- Mutations

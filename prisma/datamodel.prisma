@@ -1,0 +1,9 @@
+
+#User schema
+type User{
+    id: ID! @id
+    firstName: String!
+    lastName: String!
+    createdAt: DateTime @createdAt
+    updatedAt: DateTime @updatedAt
+}
