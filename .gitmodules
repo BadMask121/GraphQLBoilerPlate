@@ -1,0 +1,3 @@
+[submodule "wiki"]
+	path = wiki
+	url = https://BadMask121@bitbucket.org/divergentDev/msme-graphql-app.git/wiki
