@@ -1,16 +1,14 @@
+/**
+ * this is the main config factory file to use different environment config
+ * 
+ * set your NODE_ENV to either development, staging or production to get the right setting
+ */
+
+/* eslint-disable no-undef */
+require('./src/miscellaneous/polyfills/init')
 const dotenv = require('dotenv');
 dotenv.config();
-
-
-
+const confEnv = require(`./environment/${process.env.NODE_ENV}/index.js`)
 module.exports = {
-    schema: './src/schema/schema.graphql',
-    ACCESS_SECRET: process.env.ACCESS_SECRET,
-    port: (process.env.PORT) ? process.env.PORT : 4200,
-    host: (process.env.HOST) ? process.env.HOST : "localhost",
-    stage: {
-        DEVELOPMENT: "development",
-        PRODUCTION: "production"
-    },
-    env: process.env.NODE_ENV
+    ...confEnv
 }
