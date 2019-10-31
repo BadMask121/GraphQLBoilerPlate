@@ -1,0 +1,8 @@
+endpoint: "https://symmetry-middleware-f83edd4b16.herokuapp.com"
+datamodel: ../datamodel.prisma
+generate:
+  - generator: javascript-client
+    output: ../../src/generated/prisma-client
+hooks:
+  post-deploy:
+    - prisma generate
